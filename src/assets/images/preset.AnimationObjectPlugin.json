@@ -1,0 +1,148 @@
+{
+  "animation": {
+    "name": "laptop dropping while closed",
+    "access": "",
+    "options": {
+      "repeatType": "mirror",
+      "repeat": 1
+    },
+    "duration": 1000,
+    "delay": 0,
+    "repeat": 1,
+    "repeatType": "mirror",
+    "ease": "easeInOutSine",
+    "updateScene": true,
+    "updateCamera": true,
+    "updateViewer": true,
+    "animSetParallel": false,
+    "animSet": [
+      {
+        "name": "laptop closed",
+        "access": "",
+        "options": {
+          "repeatType": "mirror",
+          "repeat": 1
+        },
+        "duration": 1000,
+        "delay": 0,
+        "repeat": 1,
+        "repeatType": "mirror",
+        "ease": "easeInOutSine",
+        "updateScene": true,
+        "updateCamera": true,
+        "updateViewer": true,
+        "animSetParallel": false,
+        "animSet": [
+          {
+            "name": "laptop about to open",
+            "access": "",
+            "options": {
+              "repeatType": "mirror",
+              "repeat": 1
+            },
+            "duration": 1623,
+            "delay": 0,
+            "repeat": 1,
+            "repeatType": "mirror",
+            "ease": "easeInOutSine",
+            "updateScene": true,
+            "updateCamera": true,
+            "updateViewer": true,
+            "animSetParallel": false,
+            "animSet": [],
+            "serializableClassId": "AnimationObject"
+          }
+        ],
+        "serializableClassId": "AnimationObject"
+      },
+      {
+        "name": "",
+        "access": "",
+        "options": {
+          "repeatType": "mirror",
+          "repeat": 1
+        },
+        "duration": 1000,
+        "delay": 0,
+        "repeat": 1,
+        "repeatType": "mirror",
+        "ease": "easeInOutSine",
+        "updateScene": false,
+        "updateCamera": false,
+        "updateViewer": false,
+        "animSetParallel": false,
+        "animSet": [],
+        "serializableClassId": "AnimationObject"
+      },
+      {
+        "name": "",
+        "access": "",
+        "options": {
+          "repeatType": "mirror",
+          "repeat": 1
+        },
+        "duration": 1000,
+        "delay": 0,
+        "repeat": 1,
+        "repeatType": "mirror",
+        "ease": "easeInOutSine",
+        "updateScene": false,
+        "updateCamera": false,
+        "updateViewer": false,
+        "animSetParallel": false,
+        "animSet": [],
+        "serializableClassId": "AnimationObject"
+      },
+      {
+        "name": "",
+        "access": "",
+        "options": {
+          "repeatType": "mirror",
+          "repeat": 1
+        },
+        "duration": 1000,
+        "delay": 0,
+        "repeat": 1,
+        "repeatType": "mirror",
+        "ease": "easeInOutSine",
+        "updateScene": false,
+        "updateCamera": false,
+        "updateViewer": false,
+        "animSetParallel": false,
+        "animSet": [],
+        "serializableClassId": "AnimationObject"
+      },
+      {
+        "name": "",
+        "access": "",
+        "options": {
+          "repeatType": "mirror",
+          "repeat": 1
+        },
+        "duration": 1000,
+        "delay": 0,
+        "repeat": 1,
+        "repeatType": "mirror",
+        "ease": "easeInOutSine",
+        "updateScene": false,
+        "updateCamera": false,
+        "updateViewer": false,
+        "animSetParallel": false,
+        "animSet": [],
+        "serializableClassId": "AnimationObject"
+      }
+    ],
+    "serializableClassId": "AnimationObject"
+  },
+  "type": "AnimationObjectPlugin",
+  "resources": {
+    "geometries": {},
+    "materials": {},
+    "textures": {},
+    "images": {},
+    "shapes": {},
+    "skeletons": {},
+    "animations": {},
+    "extras": {}
+  }
+}
