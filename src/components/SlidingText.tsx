@@ -27,7 +27,7 @@ const SlidingText = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-gray-900">
+    <div className="overflow-hidden whitespace-nowrap ">
       <div ref={carouselRef} className="inline-block">
         <span className="carousel-word text-[20rem] font-bold text-white tracking-[2rem]">
           SERVICES • SERVICES • SERVICES •
