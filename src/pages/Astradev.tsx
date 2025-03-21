@@ -24,10 +24,13 @@ const Astradev = () => {
               speed={1}
             />
           </div>
-          <h1 className="text-9xl md:text-8xl font-Josefin_Sans font-bold text-center text-white relative z-20 uppercase">
-          Astradev
-        </h1>
-          <div className='top-[25rem] absolute'>
+        <div className='flex flex-col'>
+          <div className='text-[2rem] font-bold font-Josefin_Sans text-white left-[7rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
+            <h1 className="text-[13rem] font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
+             Astradev
+            </h1>
+        </div>
+          <div className='top-[30rem] absolute'>
             <Typewriter
               text={["Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy"]}
               speed={50}
