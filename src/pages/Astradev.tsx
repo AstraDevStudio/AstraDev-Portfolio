@@ -44,7 +44,7 @@ const Astradev = () => {
 
       </div>
     {/* what we do */}
-    <div className='absolute z-50 w-full bg-linear-to-t from-[#010003]  to bg-transparent  h-[60rem] '>
+    <div className='absolute z-30 w-full bg-linear-to-t from-[#010003]  to bg-transparent  h-[60rem] '>
         <SlidingText/>
         <div className='w-screen h-screen'>
         <StackedCards/>
