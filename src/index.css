@@ -8,6 +8,8 @@
 @theme {
   --font-Josefin_Sans: "Josefin Sans"; 
   --font-Rammetto-One:"Rammetto One";
+  --font-Bowlby-one:"Bowlby One";
+  --font-Dela-Gothic-One:"Dela Gothic One"
 }
 body{
   background-color: #08021E;

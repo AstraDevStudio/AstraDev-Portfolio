@@ -2,6 +2,8 @@ import bg from '../assets/images/bg.png'
 import { SparklesCore } from '@/components/ui/sparkles';
 import { Typewriter } from '@/components/ui/typewriter-text';
 import Navbar from "@/components/Navbar"
+import SlidingText from '@/components/SlidingText';
+import StackedCards from '@/components/StackedCards';
 
 
 const Astradev = () => {
@@ -25,8 +27,8 @@ const Astradev = () => {
             />
           </div>
         <div className='flex flex-col'>
-          <div className='text-[2rem] font-bold font-Josefin_Sans text-white left-[7rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
-            <h1 className="text-[13rem] font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
+          <div className='text-[2rem] font-bold font-Josefin_Sans text-white left-[9rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
+            <h1 className="text-[12rem] font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
              Astradev
             </h1>
         </div>
@@ -41,7 +43,11 @@ const Astradev = () => {
         </div>
 
       </div>
-
+    {/* what we do */}
+    <div className='absolute z-50 w-full bg-linear-to-t from-[#010003]  to bg-transparent  h-[60rem] '>
+        <SlidingText/>
+        <StackedCards/>
+    </div>
 
     </div>
   
