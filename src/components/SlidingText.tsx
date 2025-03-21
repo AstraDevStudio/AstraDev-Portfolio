@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const SlidingText = () => {
   return (
-    <div className="overflow-hidden flex justify-center h-[20rem] absolute top-[10rem] whitespace-nowrap items-center  w-full">
+    <div className="overflow-hidden flex justify-center h-[20rem]  whitespace-nowrap items-center  w-full">
       <motion.h2
         className="text-[14rem] font-extrabold font-Dela-Gothic-One text-white"
         initial={{ x: "100%" }} // Start off-screen (right)

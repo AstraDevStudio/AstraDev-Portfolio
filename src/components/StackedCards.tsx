@@ -46,7 +46,7 @@ const StackedCards = () => {
       {cards.map((card, index) => (
         <div
           key={card.id}
-          ref={(el) => (cardsRef.current[index] = el)}
+          ref={(el) => {(cardsRef.current[index] = el)}}
           className={`absolute top-0 left-[7rem] w-[80rem] rounded-4xl shadow-xl shadow-gray-900 h-[40rem] flex items-center justify-center text-4xl font-bold text-white ${card.color}`}
           style={{ zIndex: index }} // Ensure cards stack correctly
         >

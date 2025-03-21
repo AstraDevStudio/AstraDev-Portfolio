@@ -8,7 +8,7 @@ import StackedCards from '@/components/StackedCards';
 
 const Astradev = () => {
   return (
-    <div className=' h-auto w-full bg-[#08021E] '>
+    <div className=' h-auto w-full bg-[#08021E]  '>
         <Navbar />
       <img src={bg} className='w-full absolute' />
       <div className="h-[45rem] w-full bg-[#08021E] flex flex-col items-center justify-center overflow-hidden rounded-md">
