@@ -16,40 +16,43 @@ const StackedCards = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    let timeline = gsap.timeline({
+    const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top top",
+        start: "top 10%",
         end: "bottom bottom",
         scrub: true,
         pin: true,
+        markers: true,
       },
     });
 
     cardsRef.current.forEach((card, index) => {
-      timeline.fromTo(
+      // Start each card slightly below the previous one
+      const startY = index * 100; // Adjust this value to control the initial spacing
+      const endY = index * 20; // Adjust this value to control the final stacked spacing
+
+      t1.fromTo(
         card,
-        { y: "40%", opacity: 0 },
-        { y: "-10%", opacity: 10, duration: 1 },
-        index * 1 // Delays each card animation slightly
+        { y: `${startY}%` }, // Start position
+        { y: `${endY}%`, duration: 1 }, // End position
+        index * 0.5 // Stagger the animation for each card
       );
     });
   }, []);
 
   return (
     <div ref={containerRef} className="h-[400vh] relative">
-    
-     {cards.map((card, index) => (
+      {cards.map((card, index) => (
         <div
           key={card.id}
-          ref={(el) => {(cardsRef.current[index] = el)}}
-          className={`absolute top-0 left-[7rem]  w-[85%] rounded-4xl shadow-xl shadow-gray-900 h-[40rem] flex items-center justify-center text-4xl font-bold text-white ${card.color}`}
-          style={{ zIndex: index }}
+          ref={(el) => (cardsRef.current[index] = el)}
+          className={`absolute top-0 left-[7rem] w-[85%] rounded-4xl shadow-xl shadow-gray-900 h-[40rem] flex items-center justify-center text-4xl font-bold text-white ${card.color}`}
+          style={{ zIndex: index }} // Ensure cards stack correctly
         >
           {card.text}
         </div>
       ))}
-
     </div>
   );
 };
