@@ -29,8 +29,8 @@ const StackedCards = () => {
 
     cardsRef.current.forEach((card, index) => {
       // Start each card slightly below the previous one
-      const startY = index * 100; // Adjust this value to control the initial spacing
-      const endY = index * 20; // Adjust this value to control the final stacked spacing
+      const startY = index * 80; // Adjust this value to control the initial spacing
+      const endY = index * 10; // Adjust this value to control the final stacked spacing
 
       t1.fromTo(
         card,
@@ -47,7 +47,7 @@ const StackedCards = () => {
         <div
           key={card.id}
           ref={(el) => (cardsRef.current[index] = el)}
-          className={`absolute top-0 left-[7rem] w-[85%] rounded-4xl shadow-xl shadow-gray-900 h-[40rem] flex items-center justify-center text-4xl font-bold text-white ${card.color}`}
+          className={`absolute top-0 left-[7rem] w-[80rem] rounded-4xl shadow-xl shadow-gray-900 h-[40rem] flex items-center justify-center text-4xl font-bold text-white ${card.color}`}
           style={{ zIndex: index }} // Ensure cards stack correctly
         >
           {card.text}
