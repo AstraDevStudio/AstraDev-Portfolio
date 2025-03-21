@@ -27,12 +27,11 @@ const SlidingText = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-gray-900 py-12">
+    <div className="overflow-hidden whitespace-nowrap bg-gray-900">
       <div ref={carouselRef} className="inline-block">
-        <span className="carousel-word text-[20rem] font-bold text-white pr-8">
-          SERVICES SERVICES SERVICES
+        <span className="carousel-word text-[20rem] font-bold text-white tracking-[2rem]">
+          SERVICES • SERVICES • SERVICES •
         </span>
-
       </div>
     </div>
   );
