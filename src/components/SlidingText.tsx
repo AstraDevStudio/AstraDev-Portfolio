@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const SlidingText = () => {
+const SlidingText = ({word}) => {
   const carouselRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const SlidingText = () => {
       { x: 0 }, // Start from the initial position
       {
         x: -wordWidth, // Move the carousel left by the width of the word
-        duration: 10, // Adjust the duration for speed
+        duration: 30, // Adjust the duration for speed
         repeat: -1, // Infinite loop
         ease: "none", // Linear animation
       }
@@ -29,8 +29,8 @@ const SlidingText = () => {
   return (
     <div className="overflow-hidden whitespace-nowrap ">
       <div ref={carouselRef} className="inline-block">
-        <span className="carousel-word text-[20rem] font-bold text-white tracking-[2rem]">
-          SERVICES • SERVICES • SERVICES •
+        <span className="carousel-word text-[20rem] font-bold text-white tracking-[2rem] uppercase">
+        {word} • {word} • {word} •
         </span>
       </div>
     </div>

@@ -2,14 +2,14 @@ import bg from '../assets/images/bg.png'
 import { SparklesCore } from '@/components/ui/sparkles';
 import { Typewriter } from '@/components/ui/typewriter-text';
 import Navbar from "@/components/Navbar"
-import SlidingText from '@/components/SlidingText';
-import StackedCards from '@/components/StackedCards';
+import Projects from './Projects';
+import Features from './Features';
 
 
 const Astradev = () => {
   return (
     <div className=' h-auto w-full bg-[#08021E]  '>
-        <Navbar />
+      <Navbar />
       <img src={bg} className='w-full absolute' />
       <div className="h-[45rem] w-full bg-[#08021E] flex flex-col items-center justify-center overflow-hidden rounded-md">
 
@@ -26,12 +26,12 @@ const Astradev = () => {
               speed={1}
             />
           </div>
-        <div className='flex flex-col'>
-          <div className='text-[2rem] font-bold font-Josefin_Sans text-white left-[9rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
+          <div className='flex flex-col'>
+            <div className='text-[2rem] font-bold font-Josefin_Sans text-white left-[9rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
             <h1 className="text-[12rem] font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
-             Astradev
+              Astradev
             </h1>
-        </div>
+          </div>
           <div className='top-[30rem] absolute'>
             <Typewriter
               text={["Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy"]}
@@ -43,16 +43,12 @@ const Astradev = () => {
         </div>
 
       </div>
-    {/* what we do */}
-    <div className='absolute z-30 w-full bg-linear-to-t from-[#010003]  to-[#010003]/6   h-[60rem] '>
-        <SlidingText/>
-        <div className='w-screen h-screen'>
-        <StackedCards/>
-        </div>
-    </div>
+      <Projects />
+      <Features />
+
 
     </div>
-  
+
   )
 }
 
