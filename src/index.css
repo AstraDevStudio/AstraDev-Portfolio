@@ -5,6 +5,21 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+
 @theme {
   --font-Josefin_Sans: "Josefin Sans"; 
   --font-Rammetto-One:"Rammetto One";

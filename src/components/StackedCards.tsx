@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import webdesign from '../assets/images/webdesign.avif';
+import webdesign from '../assets/images/webdesign.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 

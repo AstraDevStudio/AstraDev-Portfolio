@@ -4,6 +4,7 @@ import { Typewriter } from '@/components/ui/typewriter-text';
 import Navbar from "@/components/Navbar"
 import Projects from './Projects';
 import Features from './Features';
+import { TestimonialsSectionDemo } from '../components/TestimonialSection';
 
 
 const Astradev = () => {
@@ -45,7 +46,7 @@ const Astradev = () => {
       </div>
       <Projects />
       <Features />
-
+      <TestimonialsSectionDemo/>
 
     </div>
 
