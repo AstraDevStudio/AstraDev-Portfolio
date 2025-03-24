@@ -4,7 +4,7 @@ import React from 'react'
 
 const Projects = () => {
     return (
-        <div data-scroll-section className='relative h-[570vh] w-screen bg-black'>
+        <div data-scroll-section className='relative h-[570vh] w-screen bg-gradient-to-b from-transparent to-black to-40%'>
             <div className='absolute z-30 w-screen'>
                 <SlidingText word={"Premium Projects"} />
                 <div className='m-auto text-white text-left mt-6 mb-32  w-[60rem] '>

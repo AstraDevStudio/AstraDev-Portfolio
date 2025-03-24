@@ -2,13 +2,17 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
-
+import Freelancer from '../assets/videos/Freelancer.mp4'
+import bankhotel from '../assets/videos/bankhotel.mp4'
+import clairejane from '../assets/videos/clairejane.mp4'
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-    { id: 1, text: "Website Design", color: "bg-violet-950/90", video: "your-video-url1.mp4", tilt: 0 },
-    { id: 2, text: "Card 2", color: "bg-blue-500/90", video: "your-video-url2.mp4", tilt: -5 },
-    { id: 3, text: "Card 3", color: "bg-green-500/90", video: "your-video-url3.mp4", tilt: 5 },
+    { id: 1, text: "Freelancer", color: "bg-violet-950/90", video: Freelancer, tilt: 0 },
+    { id: 2, text: "Claire Jane", color: "bg-blue-500/90", video: clairejane, tilt: -5 },
+    { id: 3, text: "Bank Hotel", color: "bg-green-500/90", video: bankhotel, tilt: 5 },
 ];
 
 const StackProject = () => {
@@ -81,7 +85,16 @@ const StackProject = () => {
 
                             {/* Video Section */}
                             <div className="mt-6 w-full h-[30rem] rounded-lg overflow-hidden flex justify-center items-center">
-                                <video className="w-full h-full object-cover" controls>
+                                <video className="w-full h-full object-cover" controls={false}
+                                autoPlay 
+                                loop 
+                                muted 
+                                playsInline
+                                ref={(el) => {
+                                    if (el) {
+                                        el.onpause = () => el.play(); // Prevent pausing
+                                    }
+                                }}>
                                     <source src={card.video} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -90,6 +103,12 @@ const StackProject = () => {
                     </div>
                 </div>
             ))}
+             <Link to='/projects'>
+                    <div className="absolute z-50 top-[55rem]">
+                        <InteractiveHoverButton/>
+                    </div>
+             </Link>
+            
         </div>
     );
 };
