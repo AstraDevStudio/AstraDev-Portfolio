@@ -67,23 +67,23 @@ const StackedCards = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-[400vh] relative">
+    <div ref={containerRef} className="h-[400vh] relative md:w-full  ">
       {cards.map((card, index) => (
         <div
           key={card.id}
           ref={(el) => { cardsRef.current[index] = el; }}
-          className="absolute top-0 left-[7rem] w-[80rem] rounded-4xl shadow-md shadow-blue-100 h-[40rem] flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-400/30 from-30% to-purple-950/50 border-t backdrop-blur-2xl border-purple-400"
+          className="absolute top-0 md:left-[7rem] md:w-[80rem] w-[25rem] rounded-4xl shadow-md shadow-blue-100 md:h-[40rem]  flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-400/30 from-30% to-purple-950/50 border-t backdrop-blur-2xl border-purple-400"
           style={{ zIndex: index }}
         >
-          <div className="flex w-full h-full px-2 py-10 m-10 justify-center gap-[10rem]">
-            <div className="flex flex-col w-[50%]">
+          <div className="flex md:flex-row flex-col  md:w-full h-full px-2 py-10 m-10 justify-center md:gap-[10rem]">
+            <div className="flex flex-col w-[100%] md:w-[50%]">
               <h1 className="z-20 p-2 mx-5">WEB DESIGN</h1>
               <p className="text-[2rem] font-Josefin_Sans font-extralight p-2">
                 It is a long established fact that a reader will be distracted by the readable content...
               </p>
             </div>
-            <div className="w-[30rem] h-[30rem] bg-cover overflow-hidden rounded-md">
-              <img src={webdesign} className="w-full h-full" />
+            <div className="md:w-[30rem] md:h-[30rem] bg-cover overflow-hidden rounded-md">
+              <img src={webdesign} className="md:w-full md:h-full" />
             </div>
           </div>
         </div>

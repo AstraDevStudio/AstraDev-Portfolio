@@ -29,7 +29,7 @@ const SlidingText = ({word}) => {
   return (
     <div className="overflow-hidden whitespace-nowrap ">
       <div ref={carouselRef} className="inline-block">
-        <span className="carousel-word text-[20rem] font-bold text-white tracking-[2rem] uppercase">
+        <span className="carousel-word md:text-[20rem] text-[10rem] font-bold text-white tracking-[2rem] uppercase">
         {word} • {word} • {word} •
         </span>
       </div>

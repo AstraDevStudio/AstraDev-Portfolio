@@ -70,7 +70,7 @@ const StackProject = () => {
                 <div
                     key={card.id}
                     ref={(el) => { (cardsRef.current[index] = el) }}
-                    className={`absolute top-0 m-auto w-[60rem] h-[40rem] rounded-[2.5rem] 
+                    className={`absolute top-0 m-auto md:w-[60rem] w-[20rem] md:h-[45rem] h-[50rem] rounded-[2.5rem] 
                         shadow-[0px_20px_50px_rgba(0,0,0,0.3)] drop-shadow-[0px_10px_30px_rgba(0,0,0,0.2)]
                         flex items-center justify-center text-4xl font-bold text-white 
                         transition-all duration-300 cursor-pointer hover:shadow-[0px_25px_60px_rgba(0,0,0,0.4)]`}
@@ -80,7 +80,7 @@ const StackProject = () => {
                     }}                
                 >
                     <div className="flex justify-center items-center min-h-screen p-8">
-                        <div className="w-[60rem] rounded-2xl p-10 bg-gray-300">
+                        <div className="md:w-[60rem] w-[25rem] rounded-2xl p-10 bg-gray-300">
                             <h1 className="text-4xl font-semibold text-gray-900">{card.text}</h1>
 
                             {/* Video Section */}
@@ -104,7 +104,7 @@ const StackProject = () => {
                 </div>
             ))}
              <Link to='/projects'>
-                    <div className="absolute z-50 top-[55rem]">
+                    <div className="absolute z-50 md:top-[55rem] top-[60rem]">
                         <InteractiveHoverButton/>
                     </div>
              </Link>

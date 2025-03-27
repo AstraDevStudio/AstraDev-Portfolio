@@ -11,9 +11,9 @@ const Features = () => {
         <div  className="h-[550vh] relative w-screen bg-black">
             <div className="absolute z-30 w-screen bg-black">
                 <SlidingText word="Premium Projects" />
-                <div className="m-auto text-white text-left mt-6 mb-32 w-[60rem]">
-                    <h1 className="text-6xl text-left">Featured Works</h1>
-                    <div className="flex flex-col mt-5 text-3xl text-white font-thin">
+                <div className="m-auto text-white text-left mt-6 mb-32 md:w-[60rem] flex flex-col ">
+                    <h1 className="md:text-6xl text-4xl md:text-left p-8 md:p-0">Featured Works</h1>
+                    <div className="flex flex-col mt-5 md:text-3xl text-lg px-8 md:p-0 text-white  font-thin">
                         <div>Beautiful designs. Eye-catching interactions. Memorable experiences.</div>
                         <div>Development that delivers. Let the work do the talking.</div>
                     </div>

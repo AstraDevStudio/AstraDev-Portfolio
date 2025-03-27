@@ -9,9 +9,9 @@ import { TestimonialsSectionDemo } from '../components/TestimonialSection';
 
 const Astradev = () => {
   return (
-    <div className=' h-auto w-full bg-[#08021E]  '>
+    <div className=' h-auto w-full bg-[#08021E]  overflow-x-hidden '>
       <Navbar />
-      <img src={bg} className='w-full absolute' />
+      <img src={bg} className='md:w-full absolute md:h-auto h-[40rem] md:inset-0 ' />
       <div className=" w-full bg-[#08021E] flex flex-col items-center justify-center overflow-hidden rounded-md">
 
         <div className="h-[40rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -28,17 +28,17 @@ const Astradev = () => {
             />
           </div>
           <div className='flex flex-col'>
-            <div className='text-[2rem] font-bold font-Josefin_Sans text-white left-[9rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
-            <h1 className="text-[12rem] font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
+            <div className='md:text-[2rem] text-[0.8rem] top-[15rem] font-bold font-Josefin_Sans text-white md:left-[9rem] left-[2rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
+            <h1 className="md:text-[12rem] text-[3.5rem] left-0 md:inset-0 font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
               Astradev
             </h1>
           </div>
-          <div className='top-[30rem] absolute'>
+          <div className='md:top-[30rem] top-[25rem] absolute'>
             <Typewriter
               text={["Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy"]}
               speed={50}
               loop={true}
-              className="text-4xl font-semibold font-Josefin_Sans text-white"
+              className="md:text-4xl text-2xl font-semibold font-Josefin_Sans text-white"
             />
           </div>
         </div>
