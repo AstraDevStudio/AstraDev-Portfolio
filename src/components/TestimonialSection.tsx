@@ -32,7 +32,7 @@ const testimonials = [
 
 export function TestimonialsSectionDemo() {
   return (
-   <div className="bg-gradient-to-b from-black to-transparent">
+   <div className="bg-gradient-to-b from-black to-transparent md:mt-1 -mt-[20rem]">
          <TestimonialsSection
             title="Trusted by developers worldwide"
             description=""
