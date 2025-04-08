@@ -31,11 +31,11 @@ export function TestimonialCard({
         "p-4 text-start sm:p-6",
         "hover:from-muted/60 hover:to-muted/20",
         "max-w-[320px] sm:max-w-[320px]",
-        "transition-colors duration-300",
+        "transition-colors duration-300 ",
         className
       )}
     >
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 ">
         <Avatar className="h-12 w-12">
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
@@ -48,7 +48,7 @@ export function TestimonialCard({
           </p>
         </div>
       </div>
-      <p className="sm:text-md mt-4 text-sm text-violet-200 ">
+      <p className="sm:text-md mt-4 text-sm text-violet-100 ">
         {text}
       </p>
     </Card>

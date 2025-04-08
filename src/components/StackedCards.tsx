@@ -67,7 +67,7 @@ const StackedCards = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-[400vh] relative md:w-full left-[0.8rem] md:left-0  ">
+    <div ref={containerRef} className="h-[400vh] relative md:w-full  ">
       {cards.map((card, index) => (
         <div
           key={card.id}

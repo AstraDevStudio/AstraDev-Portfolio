@@ -7,8 +7,8 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 const Features = () => {
 
 
-    return ( 
-        <div  className="h-[550vh] relative w-screen bg-black md:mt-1 -mt-[20rem]">
+    return (
+        <div  className="h-[550vh] relative w-screen bg-black md:mt-1 -mt-[10rem]">
             <div className="absolute z-30 w-screen bg-black">
                 <SlidingText word="Premium Projects" />
                 <div className="m-auto text-white text-left mt-6 mb-32 md:w-[60rem] flex flex-col ">
@@ -18,7 +18,7 @@ const Features = () => {
                         <div>Development that delivers. Let the work do the talking.</div>
                     </div>
                 </div>
-                <div className="w-screen h-screen  ">
+                <div className="w-screen h-screen">
                     <StackedCards />
                 </div>
             </div>
