@@ -38,7 +38,7 @@ export const HeroParallax = ({
     springConfig
   );
   const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    useTransform(scrollYProgress, [0, 0.3], [15, 1]),
     springConfig
   );
   const opacity = useSpring(
@@ -50,13 +50,14 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0,0.5], [-700, 500]),
     springConfig
   );
   return (
+    // parallax
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] py-1 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -103,10 +104,20 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+      <div className='m-auto text-white text-left mt-6 mb-32  md:w-[60rem] '>
+                    <h1 className='md:text-6xl text-4xl md:text-left p-8 md:p-0 '>
+                        Featured Works
+                    </h1>
+                    <div className="flex flex-col mt-5 md:text-3xl text-lg px-8 md:p-0 text-white  font-thin ">
+                        <div>Beautiful designs. Eye-catching interactions. Memorable experiences.</div>
+                        <div>Development that delivers. Let the work do the talking.</div>
+                    </div>
+
+      </div>
+      <h1 className="text-2xl md:text-7xl font-bold text-white">
         The Ultimate <br /> development studio
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products.
@@ -135,7 +146,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-96 w-[30rem] relative flex-shrink-0 "
     >
       <a
         href={product.link}

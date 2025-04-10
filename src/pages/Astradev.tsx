@@ -5,9 +5,72 @@ import { Typewriter } from '@/components/ui/typewriter-text';
 import Navbar from "@/components/Navbar"
 import Projects from './Projects';
 import Features from './Features';
+import Freelancer from '../assets/videos/Freelancer.mp4'
+
 import { TestimonialsSectionDemo } from '../components/TestimonialSection';
+import { HeroParallax } from '@/components/hero-parallax';
+import freelanceastra from '../assets/images/freelanceastra.png'
+import clairejane from '../assets/images/claire jane.png'
+import bankhotel from '../assets/images/BankHotel.png'
+import SlidingText from '@/components/SlidingText';
 
+export const products = [
+  {
+    title: "Claire Jane",
+    link: "https://clairejane.netlify.app/", 
+    thumbnail:
+      clairejane,
+  },
+  {
+    title: "Freelanceastra",
+    link: "https://freelanceastra.netlify.app/",
+    thumbnail:
+     freelanceastra,
+  },
+  {
+    title: "hotelbank",
+    link: "https://hotelbank.netlify.app/",
+    thumbnail:
+      bankhotel,
+  },
 
+  {
+    title: "Claire Jane",
+    link: "https://clairejane.netlify.app/", 
+    thumbnail:
+      clairejane,
+  },
+  {
+    title: "Freelanceastra",
+    link: "https://freelanceastra.netlify.app/",
+    thumbnail:
+     freelanceastra,
+  },
+  {
+    title: "hotelbank",
+    link: "https://hotelbank.netlify.app/",
+    thumbnail:
+      bankhotel,
+  },
+
+  {
+    title: "Claire Jane",
+    link: "https://clairejane.netlify.app/", 
+    thumbnail:
+      clairejane,
+  },
+  {
+    title: "Freelanceastra",
+    link: "https://freelanceastra.netlify.app/",
+    thumbnail:
+     freelanceastra,
+  },
+  {
+    title: "hotelbank",
+    link: "https://hotelbank.netlify.app/",
+    thumbnail:
+      bankhotel,
+  }];
 const Astradev = () => {
   return (
     <div className=' h-auto w-full bg-[#08021E]  overflow-x-hidden '>
@@ -46,7 +109,10 @@ const Astradev = () => {
         </div>
 
       </div>
-      <Projects />
+      {/* <Projects /> */}
+      <SlidingText word={"Premium Projects"} />
+               
+      <HeroParallax products={products}/>
       <Features />
       <TestimonialsSectionDemo/>
 
