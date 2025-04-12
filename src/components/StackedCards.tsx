@@ -39,7 +39,7 @@ const StackedCards = () => {
 
     // GSAP Stacked Cards Animation
     const screenWidth = window.innerWidth;
-    const startValue = screenWidth < 768 ? "top 5%" : "top 10%";
+    const startValue = screenWidth < 768 ? "top top" : "top 10%";
     const endValue = screenWidth < 768 ? "bottom 80%" : "bottom bottom";
     const t1 = gsap.timeline({
       scrollTrigger: {
@@ -63,7 +63,10 @@ const StackedCards = () => {
         index * 0.5
       );
     });
-
+    ScrollTrigger.refresh();
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
     return () => {
       lenis.destroy();
     };
