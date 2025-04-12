@@ -38,11 +38,14 @@ const StackedCards = () => {
     gsap.ticker.lagSmoothing(0);
 
     // GSAP Stacked Cards Animation
+    const screenWidth = window.innerWidth;
+    const startValue = screenWidth < 768 ? "top 5%" : "top 10%";
+    const endValue = screenWidth < 768 ? "bottom 80%" : "bottom bottom";
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 8%",
-        end: "bottom bottom",
+        start: startValue,
+        end: endValue,
         scrub: true,
         pin: true,
         markers: false,
@@ -72,7 +75,7 @@ const StackedCards = () => {
         <div
           key={card.id}
           ref={(el) => { cardsRef.current[index] = el; }}
-          className="absolute top-0 md:left-[7rem] left-[1.55rem] h-[30rem] md:w-[80rem] w-[22rem] rounded-4xl  md:h-[40rem]  flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-500/20 from-30% to-purple-950/50 shadow-md  shadow-gray-800 backdrop-blur-2xl "
+          className="absolute top-0 md:left-[7rem] left-[1.45rem] h-[30rem] md:w-[80rem] w-[22rem] rounded-4xl  md:h-[40rem]  flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-500/20 from-30% to-purple-950/50 shadow-md  shadow-gray-800 backdrop-blur-2xl "
           style={{ zIndex: index }}
         >
           <div className="flex md:flex-row flex-col  md:w-full h-full px-2 py-10 m-10 justify-center md:gap-[10rem]">
