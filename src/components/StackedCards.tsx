@@ -79,7 +79,7 @@ const StackedCards = () => {
 
   return (
     <div ref={containerRef} className=" relative md:w-full   ">
-        <div className="min-h-[3000px] md:h-[400vh] relative">
+        <div className="min-h-[250vh] md:h-[400vh] relative">
         {cards.map((card, index) => (
         <div
           key={card.id}
