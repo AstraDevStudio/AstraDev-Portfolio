@@ -24,9 +24,9 @@ export const HeroParallax = ({
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   });
-
+  const isMobile = window.innerWidth < 768;
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
@@ -38,7 +38,7 @@ export const HeroParallax = ({
     springConfig
   );
   const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    useTransform(scrollYProgress, [0, 0.2], isMobile ? [0, 0] : [15, 0]),
     springConfig
   );
   const opacity = useSpring(
@@ -50,14 +50,14 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.6], [-700, 500]),
+    useTransform(scrollYProgress, isMobile?[0,0.5]:[0, 0.6], [-700, 500]),
     springConfig
   );
   return (
     // parallax
     <div
       ref={ref}
-      className="min-h-[300vh] py-1 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="min-h-[300vh]  py-1 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -154,6 +154,7 @@ export const ProductCard = ({
       >
         <img
           src={product.thumbnail}
+          loading="lazy"
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"

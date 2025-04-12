@@ -21,11 +21,13 @@ const StackProject = () => {
 
     useEffect(() => {
         // Initialize Lenis
+        const isMobile = window.innerWidth < 768;
+        if (!isMobile) {
         const lenis = new Lenis({
             duration: 1,
             easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smooth: true,
-        }as any);
+        } as any);
 
         function raf(time: number) {
             lenis.raf(time);
@@ -33,15 +35,16 @@ const StackProject = () => {
         }
         requestAnimationFrame(raf);
 
-        // GSAP ScrollTrigger with Lenis
-        const t1 = gsap.timeline({
+         // GSAP ScrollTrigger with Lenis
+         const t1 = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top 5%",
                 end: "bottom bottom",
                 scrub: 1.5, // Reduce scrub to make transitions smoother
-                pin: true,
-                scroller: lenis.rootElement, // Sync Lenis with GSAP
+                pin: !isMobile, // Don't pin on mobile
+                scroller: !isMobile ? lenis.rootElement : undefined,
+                // scroller: lenis.rootElement, // Sync Lenis with GSAP
             },
         });
 
@@ -62,10 +65,12 @@ const StackProject = () => {
         return () => {
             lenis.destroy();
         };
+        }
+       
     }, []);
 
     return (
-        <div ref={containerRef} className="h-[400vh] relative flex items-center justify-center">
+        <div ref={containerRef} className="md:h-[400vh] h-[200vh] relative flex items-center justify-center">
             {cards.map((card, index) => (
                 <div
                     key={card.id}
