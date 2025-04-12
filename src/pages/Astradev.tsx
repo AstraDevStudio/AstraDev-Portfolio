@@ -94,7 +94,7 @@ const Astradev = () => {
           </div>
           <div className='flex flex-col md:top-[4rem] top-[1rem] relative '>
             <div className='md:text-[2rem] text-[0.8rem] md:top-[0.2rem] top-0 font-bold font-Josefin_Sans text-white md:left-[9rem] left-[2rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
-            <h1 className="md:text-[12rem] text-[3.5rem] top-[2rem] md:top-[1rem] left-0 md:inset-0 font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
+            <h1 className="md:text-[12rem] text-[3.2rem] top-[2rem] md:top-[1rem] left-0 md:inset-0 font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
               Astradev
             </h1>
           </div>
