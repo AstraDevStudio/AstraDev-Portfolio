@@ -38,6 +38,8 @@ const StackedCards = () => {
     gsap.ticker.lagSmoothing(0);
 
     // GSAP Stacked Cards Animation
+    if (!containerRef.current || cardsRef.current.some(c => c === null)) return;
+
     const screenWidth = window.innerWidth;
     const startValue = screenWidth < 768 ? "top top" : "top 10%";
     const endValue = screenWidth < 768 ? "bottom 80%" : "bottom bottom";
@@ -48,7 +50,7 @@ const StackedCards = () => {
         end: endValue,
         scrub: true,
         pin: true,
-        markers: false,
+        markers: true,
       },
     });
 
