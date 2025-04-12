@@ -8,7 +8,7 @@ const Features = () => {
 
 
     return (
-        <div  className="h-[550vh] relative w-screen bg-black md:mt-1 -mt-[50rem]">
+        <div  className="h-[550vh] relative w-screen bg-black md:mt-1 -mt-40">
             <div className="absolute z-30 w-screen bg-black">
                 <SlidingText word="Premium Projects" />
                 <div className="m-auto text-white text-left mt-6 mb-32 md:w-[60rem] flex flex-col ">

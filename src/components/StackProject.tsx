@@ -44,6 +44,7 @@ const StackProject = () => {
                 scrub: 1.5, // Reduce scrub to make transitions smoother
                 pin: !isMobile, // Don't pin on mobile
                 scroller: !isMobile ? lenis.rootElement : undefined,
+                markers:false
                 // scroller: lenis.rootElement, // Sync Lenis with GSAP
             },
         });

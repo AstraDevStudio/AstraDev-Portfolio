@@ -13,6 +13,7 @@ import freelanceastra from '../assets/images/freelanceastra.png'
 import clairejane from '../assets/images/claire jane.png'
 import bankhotel from '../assets/images/BankHotel.png'
 import SlidingText from '@/components/SlidingText';
+import ProjectCards from '@/components/ProjectCards';
 
 export const products = [
   {
@@ -113,6 +114,9 @@ const Astradev = () => {
       <SlidingText word={"Premium Projects"} />
                
       <HeroParallax products={products}/>
+      <div className='w-full  h-[40rem] md:hidden z-40 mt-24 relative '>
+           <ProjectCards/>
+      </div>
       <Features />
       <TestimonialsSectionDemo/>
 
