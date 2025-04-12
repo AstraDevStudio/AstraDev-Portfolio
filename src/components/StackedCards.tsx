@@ -22,10 +22,10 @@ const StackedCards = () => {
     const lenis = new Lenis({
       smooth: true,
       duration: 1.2,
-      ease: (t) => 1 - Math.pow(1 - t, 3), // Custom easing
-    });
+      ease: (t:number) => 1 - Math.pow(1 - t, 3), // Custom easing
+    }as any);
 
-    function raf(time) {
+    function raf(time:number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -72,7 +72,7 @@ const StackedCards = () => {
         <div
           key={card.id}
           ref={(el) => { cardsRef.current[index] = el; }}
-          className="absolute top-0 md:left-[7rem] md:w-[80rem] w-[25rem] rounded-4xl  md:h-[40rem]  flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-400/30 from-30% to-purple-950/50 border-t backdrop-blur-2xl border-purple-400"
+          className="absolute top-0 md:left-[7rem] md:w-[80rem] w-[25rem] rounded-4xl  md:h-[40rem]  flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-500/20 from-30% to-purple-950/50 shadow-md  shadow-gray-800 backdrop-blur-2xl "
           style={{ zIndex: index }}
         >
           <div className="flex md:flex-row flex-col  md:w-full h-full px-2 py-10 m-10 justify-center md:gap-[10rem]">

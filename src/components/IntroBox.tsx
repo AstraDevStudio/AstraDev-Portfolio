@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Background from '../assets/icons/Background.svg'
 import box from '../assets/icons/box.svg'
 import Image from '../assets/icons/Image.svg'

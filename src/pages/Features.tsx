@@ -1,8 +1,8 @@
 import SlidingText from '@/components/SlidingText';
 import StackedCards from '@/components/StackedCards';
-import StackProject from '@/components/StackProject';
-import React, { useEffect } from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+// import StackProject from '@/components/StackProject';
+// import React, { useEffect } from 'react';
+// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const Features = () => {
 

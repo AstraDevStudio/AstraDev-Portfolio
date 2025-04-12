@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { TestimonialCard, TestimonialAuthor } from "@/components/ui/testimonial-card"
 import SlidingText from "./SlidingText"
-import { SplashCursor } from "./ui/splash-cursor"
+// import { SplashCursor } from "./ui/splash-cursor"
 
 interface TestimonialsSectionProps {
   title: string

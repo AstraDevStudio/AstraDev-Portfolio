@@ -25,7 +25,7 @@ const StackProject = () => {
             duration: 1,
             easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smooth: true,
-        });
+        }as any);
 
         function raf(time: number) {
             lenis.raf(time);

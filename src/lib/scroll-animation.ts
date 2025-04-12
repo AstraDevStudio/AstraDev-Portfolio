@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-export const scrollAnimation=(position:any,target:any,onUpdate:any)=>{
+export const scrollAnimation=(position:any)=>{
     const tl=gsap.timeline();
 
     tl.to(position,{

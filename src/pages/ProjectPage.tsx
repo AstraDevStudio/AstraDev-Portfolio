@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { HeroParallax } from "../components/hero-parallax";
 import freelanceastra from '../assets/images/freelanceastra.png'
 import clairejane from '../assets/images/claire jane.png'

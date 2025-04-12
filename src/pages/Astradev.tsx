@@ -3,9 +3,9 @@ import bg2 from '../assets/images/iPhone 16 - bg.svg'
 import { SparklesCore } from '@/components/ui/sparkles';
 import { Typewriter } from '@/components/ui/typewriter-text';
 import Navbar from "@/components/Navbar"
-import Projects from './Projects';
+// import Projects from './Projects';
 import Features from './Features';
-import Freelancer from '../assets/videos/Freelancer.mp4'
+// import Freelancer from '../assets/videos/Freelancer.mp4'
 
 import { TestimonialsSectionDemo } from '../components/TestimonialSection';
 import { HeroParallax } from '@/components/hero-parallax';

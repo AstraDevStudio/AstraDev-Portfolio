@@ -1,27 +1,27 @@
-import { useState, useEffect, useRef, forwardRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react"; // Menu and Close icons
-import Draggable from "react-draggable";
+// import Draggable from "react-draggable";
 
-const DraggableComponent = forwardRef(({ children, className = "", ...props }, ref) => {
-    const dragRef = ref || useRef(null);
+// const DraggableComponent = forwardRef(({ children, className = "", ...props }, ref) => {
+//     const dragRef = ref || useRef(null);
 
-    return (
-        <Draggable nodeRef={dragRef} {...props}>
-            <div ref={dragRef} className={`cursor-move ${className}`}>
-                {children}
-            </div>
-        </Draggable>
-    );
-});
+//     return (
+//         <Draggable nodeRef={dragRef} {...props}>
+//             <div ref={dragRef} className={`cursor-move ${className}`}>
+//                 {children}
+//             </div>
+//         </Draggable>
+//     );
+// });
 
 
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [hover, setHover] = useState(false);
-    const menuRef = useRef(null);
-    const imageRef = useRef(null);
+    const menuRef = useRef<HTMLDivElement | null>(null);
+    // const imageRef = useRef(null);
 
 
     // Prevent scrolling when menu is open
@@ -35,7 +35,7 @@ const Navbar = () => {
 
     // Close menu if clicked outside
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const handleClickOutside = (event:any) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 setIsOpen(false);
             }

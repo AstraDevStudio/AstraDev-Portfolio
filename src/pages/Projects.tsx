@@ -1,6 +1,6 @@
 import SlidingText from '@/components/SlidingText'
 import StackProject from '@/components/StackProject'
-import React from 'react'
+// import React from 'react'
 
 const Projects = () => {
     return (
