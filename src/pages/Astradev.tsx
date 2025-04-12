@@ -76,7 +76,7 @@ const Astradev = () => {
     <div className=' h-auto w-full bg-[#08021E]  overflow-x-hidden '>
       <Navbar />
       <img src={bg} className='md:w-full hidden md:block absolute md:h-auto h-[40rem] md:inset-0 ' />
-      <img src={bg2} className='md:w-full md:hidden block absolute md:inset-0 ' />
+      <img src={bg2} className='md:w-full md:hidden flex absolute md:inset-0 ' />
       <div className=" w-full bg-[#08021E] flex flex-col items-center justify-center overflow-hidden rounded-md">
 
         <div className="h-[40rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
