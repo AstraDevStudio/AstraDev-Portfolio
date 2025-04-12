@@ -11,4 +11,8 @@ export default defineConfig({
       webgi: path.resolve(__dirname, 'node_modules/webgi/dist/examples/runtime/bundle.m.js'),
     },
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5173 
+  }
 })
