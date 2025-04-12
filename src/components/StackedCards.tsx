@@ -50,7 +50,7 @@ const StackedCards = () => {
         end: endValue,
         scrub: true,
         pin: true,
-        markers: true,
+        markers: false,
       },
     });
 
@@ -75,8 +75,9 @@ const StackedCards = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-[400vh] relative md:w-full   ">
-      {cards.map((card, index) => (
+    <div ref={containerRef} className=" relative md:w-full   ">
+        <div className="h-[200vh] md:h-[400vh] relative">
+        {cards.map((card, index) => (
         <div
           key={card.id}
           ref={(el) => { cardsRef.current[index] = el; }}
@@ -96,6 +97,7 @@ const StackedCards = () => {
           </div>
         </div>
       ))}
+        </div>
     </div>
   );
 };
