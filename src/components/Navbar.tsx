@@ -124,7 +124,7 @@ const Navbar = () => {
 
                             {/* Links (Left but towards the right side) */}
                             <div className="flex flex-col space-y-4 text-2xl font-normal text-left">
-                                {["Instagram", "Dribbble", "hello@oaksun.studio"].map((link) => (
+                                {["Instagram", "Dribbble", "astradevsstudio@gmail.com"].map((link) => (
                                     <div key={link} className="group relative w-fit">
                                         <p className="hover:text-white transition">{link}</p>
                                         <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>

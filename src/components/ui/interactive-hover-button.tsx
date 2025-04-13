@@ -10,12 +10,12 @@ interface InteractiveHoverButtonProps
 const InteractiveHoverButton = React.forwardRef<
   HTMLButtonElement,
   InteractiveHoverButtonProps
->(({ text = "See More", className, ...props }, ref) => {
+>(({ text , className, ...props }, ref) => {
   return (
     <button
       ref={ref}
       className={cn(
-        "group relative w-40 cursor-pointer overflow-hidden rounded-full border bg-background p-2 text-center font-semibold",
+        "group relative w-[10rem] cursor-pointer overflow-hidden rounded-full md:border bg-background  p-2 text-center font-semibold",
         className,
       )}
       {...props}
