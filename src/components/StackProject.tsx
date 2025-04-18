@@ -18,7 +18,7 @@ const cards = [
 const StackProject = () => {
     const containerRef = useRef(null);
     const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
+    
     useEffect(() => {
         // Initialize Lenis
         const isMobile = window.innerWidth < 768;
