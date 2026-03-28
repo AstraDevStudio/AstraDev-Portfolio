@@ -124,13 +124,13 @@ const StackedCards = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className=" relative md:w-full   ">
-        <div className="min-h-[250vh] md:h-[400vh] relative">
+    <div ref={containerRef} className="relative w-full">
+        <div className="min-h-[250vh] md:min-h-[350vh] relative">
         {cardDetails.map((card, index) => (
         <div
           key={index}
           ref={(el) => { cardsRef.current[index] = el; }}
-          className="absolute top-0 md:left-[7rem] left-[1rem] h-[30rem] md:w-[80rem] w-[22rem] rounded-4xl  md:h-[40rem]  flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-500/20 from-30% to-purple-950/50 shadow-md  shadow-gray-800 backdrop-blur-2xl "
+          className="absolute top-0 left-1/2 -translate-x-1/2 h-[30rem] md:w-[min(80rem,95vw)] w-[22rem] rounded-4xl md:h-[40rem] flex items-center justify-center text-4xl font-bold text-white bg-radial from-gray-500/20 from-30% to-purple-950/50 shadow-md shadow-gray-800 backdrop-blur-2xl"
           style={{ zIndex: index }}
         >
           <div className="flex md:flex-row flex-col  md:w-full h-full px-2 py-10 m-10 justify-center md:gap-[10rem]">
@@ -141,7 +141,7 @@ const StackedCards = () => {
               </p>
             </div>
             <div className="md:w-[30rem] md:h-[30rem] bg-cover overflow-hidden rounded-md">
-              <img src={card.image} className="md:w-full md:h-full" />
+              <img src={card.image} className="w-full h-full object-cover" alt={card.title} />
             </div>
           </div>
         </div>

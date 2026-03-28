@@ -8,17 +8,17 @@ const Features = () => {
 
 
     return (
-        <div  className="h-[550vh] relative w-screen bg-black md:mt-1 -mt-40">
-            <div className="absolute z-30 w-screen bg-black">
-                <SlidingText word="Premium Projects" />
-                <div className="m-auto text-white text-left mt-6 mb-32 md:w-[60rem] flex flex-col ">
-                    <h1 className="md:text-6xl text-4xl md:text-left p-8 md:p-0">Featured Works</h1>
-                    <div className="flex flex-col mt-5 md:text-3xl text-lg px-8 md:p-0 text-white  font-thin">
-                        <div>Beautiful designs. Eye-catching interactions. Memorable experiences.</div>
-                        <div>Development that delivers. Let the work do the talking.</div>
+        <div className="relative w-full bg-black pt-12">
+            <div className="relative z-30 w-full bg-black">
+                <SlidingText word="What We Do" />
+                <div className="mx-auto text-white text-left mt-6 mb-16 md:w-[60rem] flex flex-col px-8 md:px-0">
+                    <h2 className="md:text-6xl text-4xl">Our Services</h2>
+                    <div className="flex flex-col mt-5 md:text-3xl text-lg text-white font-thin">
+                        <p>Beautiful designs. Eye-catching interactions. Memorable experiences.</p>
+                        <p>Development that delivers. Let the work do the talking.</p>
                     </div>
                 </div>
-                <div className="w-screen h-screen">
+                <div className="w-full min-h-screen">
                     <StackedCards />
                 </div>
             </div>

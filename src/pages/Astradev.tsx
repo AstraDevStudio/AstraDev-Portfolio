@@ -3,9 +3,7 @@ import bg2 from '../assets/images/iPhone 16 - bg.svg'
 import { SparklesCore } from '@/components/ui/sparkles';
 import { Typewriter } from '@/components/ui/typewriter-text';
 import Navbar from "@/components/Navbar"
-// import Projects from './Projects';
 import Features from './Features';
-// import Freelancer from '../assets/videos/Freelancer.mp4'
 
 import { TestimonialsSectionDemo } from '../components/TestimonialSection';
 import { HeroParallax } from '@/components/hero-parallax';
@@ -13,9 +11,10 @@ import freelanceastra from '../assets/images/freelanceastra.png'
 import clairejane from '../assets/images/claire jane.png'
 import bankhotel from '../assets/images/BankHotel.png'
 import SlidingText from '@/components/SlidingText';
-// import ProjectCards from '@/components/ProjectCards';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import TechStack from '@/components/TechStack';
+import CTASection from '@/components/CTASection';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
-// import { Input } from '@/components/ui/input';
 
 export const products = [
   {
@@ -77,78 +76,87 @@ export const products = [
 const Astradev = () => {
   return (
     <>
-          <div className=' h-auto w-full bg-[#08021E]  overflow-x-hidden '>
-      <Navbar />
-      <img src={bg} className='md:w-full hidden md:block absolute md:h-auto  md:inset-0 ' />
-      <img src={bg2} className='md:w-full md:hidden h-[48rem] absolute md:inset-0 ' />
-      <div className=" w-full bg-[#08021E] flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className='h-auto w-full bg-[#08021E] overflow-x-hidden'>
+        <Navbar />
 
-        <div className="h-[40rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <div className="w-full absolute inset-0 h-screen">
+        {/* Hero Section */}
+        <header className="relative w-full h-screen overflow-hidden" role="banner">
+          <img src={bg} className='md:w-full hidden md:block absolute md:h-auto md:inset-0 pointer-events-none' alt="" aria-hidden="true" />
+          <img src={bg2} className='md:w-full md:hidden h-[48rem] absolute md:inset-0 pointer-events-none' alt="" aria-hidden="true" />
+          <div className="w-full absolute inset-0 h-screen" aria-hidden="true">
             <SparklesCore
               id="tsparticlesfullpage"
               background="transparent"
               minSize={0.6}
               maxSize={1.8}
               particleDensity={80}
-              className="w-screen h-screen"
+              className="w-full h-full"
               particleColor="#FFFFFF"
               speed={1}
             />
           </div>
-          <div className='flex flex-col md:top-[4rem] top-[1rem] relative '>
-            <div className='md:text-[2rem] text-[0.8rem] md:top-[0.2rem] top-0 font-bold font-Josefin_Sans text-white md:left-[9rem] left-[2rem] absolute ' >WEB DESIGN + WEB STUDIO</div>
-            <h1 className="md:text-[12rem] text-[3.2rem] top-[2rem] md:top-[1rem] left-0 md:inset-0 font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
-              Astradev
-            </h1>
+          <div className='absolute inset-0 flex flex-col items-center justify-center z-20'>
+            <div className='flex flex-col relative'>
+              <p className='md:text-[2rem] text-[0.8rem] font-bold font-Josefin_Sans text-white md:left-[9rem] left-[2rem] absolute md:top-[0.2rem] top-0'>WEB DESIGN + WEB STUDIO</p>
+              <h1 className="md:text-[12rem] pt-10 text-[3.2rem] mt-[2rem] md:mt-[1rem] font-Rammetto-One font-bold text-center text-white uppercase leading-none">
+                Astradev
+              </h1>
+            </div>
+            <div className='mt-8'>
+              <Typewriter
+                text={["Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy"]}
+                speed={50}
+                loop={true}
+                className="md:text-4xl text-2xl font-semibold font-Josefin_Sans text-white"
+              />
+            </div>
           </div>
-          <div className='md:top-[33rem] top-[27rem] absolute'>
-            <Typewriter
-              text={["Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy", "Build  .  Develop   .   Deploy"]}
-              speed={50}
-              loop={true}
-              className="md:text-4xl text-2xl font-semibold font-Josefin_Sans text-white"
+        </header>
+
+        <SlidingText word={"Premium Projects"} />
+
+        <HeroParallax products={products}/>
+
+        <WhyChooseUs />
+        <TechStack />
+
+        <Features />
+        <TestimonialsSectionDemo/>
+        <CTASection />
+
+        <footer className='flex flex-col items-center justify-center pb-12 pt-16 bg-black border-t border-white/5' role="contentinfo">
+          <div className='flex md:flex-row p-2 md:w-[60%] gap-1.5 md:rounded-full w-[95%] md:justify-center justify-center items-center'>
+            <input
+              className='bg-gradient-to-t from-[#5a4998] to-[#2a1f5e] text-white placeholder-white/60 md:rounded-4xl rounded-lg md:w-[80%] w-[80%] p-4.5 outline-none border border-purple-500/30'
+              placeholder='Enter your email'
+              aria-label="Email address"
             />
+            <InteractiveHoverButton text='Contact Us' className='rounded-lg md:rounded-full py-4.5 border-purple-500/50 text-white'/>
           </div>
-        </div>
-
-      </div>
-      {/* <Projects /> */}
-      <SlidingText word={"Premium Projects"} />
-               
-      <HeroParallax products={products}/>
-      {/* <div className='w-full  h-[40rem] md:hidden z-40 mt-24 relative '>
-           <ProjectCards/>
-      </div> */}
-      <Features />
-      <TestimonialsSectionDemo/>
-      
-    </div>
-    
-    <footer className='flex flex-col items-center justify-center pb-[5rem] pt-[1rem] bg-black'>
-      <div className='flex md:flex-row p-2 md:w-[60%] gap-1.5   md:rounded-full w-full  md:justify-center justify-center items-center '>
-        <input className=' bg-gradient-to-t from-[#5a4998] to-white md:rounded-4xl rounded-xs md:w-[80%] w-[80%] p-4.5 '  placeholder='Enter Email'></input>
-        <InteractiveHoverButton text='Contact Us' className='rounded-xs md:rounded-full py-4.5'/>
-      </div>
-      <h1 className="md:text-[12rem] text-[3.2rem] top-[2rem] md:top-[1rem] left-0 md:inset-0 font-Rammetto-One font-bold text-center text-white relative z-20 uppercase">
-              Astradev
-      </h1>
-      <div className='flex justify-between w-[20rem] md:w-full mt-[1rem] '>
-          <div className='w-[30%] md:w-full md:text-2xl text-md font-Josefin_Sans text-gray-400  mt-[2rem]  flex flex-col justify-center items-center'>
-                <p>Work</p>
-                <p>Services</p>
-                <p>About Us</p>
+          <h2 className="md:text-[10rem] text-[3rem] mt-12 font-Rammetto-One font-bold text-center text-white uppercase leading-none">
+            Astradev
+          </h2>
+          <p className="text-gray-500 font-Josefin_Sans mt-4 text-center text-sm md:text-base max-w-md px-4">
+            Premium web design & development studio. We turn ideas into digital experiences.
+          </p>
+          <div className='flex justify-center gap-16 md:gap-32 w-full mt-8'>
+            <nav className='md:text-2xl text-md font-Josefin_Sans text-gray-400 flex flex-col items-center gap-2' aria-label="Footer navigation">
+              <a href="#work" className="hover:text-white transition cursor-pointer">Work</a>
+              <a href="#services" className="hover:text-white transition cursor-pointer">Services</a>
+              <a href="#about" className="hover:text-white transition cursor-pointer">About Us</a>
+            </nav>
+            <div className='md:text-2xl text-md font-Josefin_Sans text-gray-400 flex flex-col items-center gap-2'>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition cursor-pointer">Instagram</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition cursor-pointer">Twitter</a>
+              <a href="mailto:astradevsstudio@gmail.com" className="hover:text-white transition cursor-pointer break-all">astradevsstudio@gmail.com</a>
+            </div>
           </div>
-          <div className=' md:text-2xl text-wrap text-md font-Josefin_Sans w-[60%] mt-[2rem] text-gray-400 flex flex-col justify-center items-center'>
-                <p>Instagram</p>
-                <p>Twitter</p>
-                <p className='flex-wrap flex text-wrap'>astradevsstudio@gmail.com</p>
+          <div className="mt-12 text-gray-600 font-Josefin_Sans text-sm">
+            © {new Date().getFullYear()} Astradev Studios. All rights reserved.
           </div>
+        </footer>
       </div>
- 
-    </footer>
-</>
-
+    </>
   )
 }
 

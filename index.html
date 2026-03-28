@@ -4,7 +4,90 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Astradev Studios — Web Design & Development Studio | Build. Develop. Deploy.</title>
+    <meta name="description" content="Astradev Studios is a premium web design and development studio. We craft stunning websites, web apps, Android apps, and automation solutions that convert visitors into customers." />
+    <meta name="keywords" content="web design studio, web development agency, custom website design, React development, web application development, Android app development, UI/UX design, freelance web developer, Astradev" />
+    <meta name="author" content="Astradev Studios" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://astradev.studio/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Astradev Studios — Premium Web Design & Development" />
+    <meta property="og:description" content="We build beautiful, high-performance websites and apps. From design to deployment — Astradev delivers digital experiences that stand out." />
+    <meta property="og:url" content="https://astradev.studio/" />
+    <meta property="og:site_name" content="Astradev Studios" />
+    <meta property="og:image" content="https://astradev.studio/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Astradev Studios — Web Design & Development Studio" />
+    <meta name="twitter:description" content="Premium web design, development, and automation solutions. We build digital products that convert." />
+    <meta name="twitter:image" content="https://astradev.studio/og-image.png" />
+
+    <!-- Structured Data for LLM & Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Astradev Studios",
+      "description": "Premium web design and development studio specializing in custom websites, web applications, Android apps, and automation solutions.",
+      "url": "https://astradev.studio",
+      "email": "astradevsstudio@gmail.com",
+      "serviceType": ["Web Design", "Web Development", "Android App Development", "Automation Solutions"],
+      "areaServed": "Worldwide",
+      "priceRange": "$$",
+      "knowsAbout": ["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Three.js", "GSAP", "Kotlin", "Python", "MongoDB"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Design",
+              "description": "Visually stunning, responsive websites with modern UI/UX design"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Applications",
+              "description": "Scalable web apps using React, Node.js, and modern frameworks"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Android Applications",
+              "description": "Sleek, functional Android apps using Kotlin and Java"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automation Solutions",
+              "description": "Custom automation tools using Python, Selenium, and modern tooling"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- LLM-friendly metadata -->
+    <meta name="llm:name" content="Astradev Studios" />
+    <meta name="llm:type" content="Web Design & Development Studio" />
+    <meta name="llm:services" content="Web Design, Web Development, Android Apps, Automation" />
+    <meta name="llm:contact" content="astradevsstudio@gmail.com" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -13,12 +96,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#08021E" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="module">
-      import {ViewerApp} from "https://dist.pixotronics.com/webgi/runtime/bundle-0.10.4.mjs";
-    </script>
   </body>
 </html>

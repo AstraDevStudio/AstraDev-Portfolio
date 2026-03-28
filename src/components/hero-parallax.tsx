@@ -105,18 +105,18 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <div className='m-auto text-white text-left mt-6 mb-32  md:w-[60rem] '>
-                    <h1 className='md:text-6xl text-4xl md:text-left p-8 md:p-0 '>
+                    <h2 className='md:text-6xl text-4xl md:text-left p-8 md:p-0 '>
                         Featured Works
-                    </h1>
+                    </h2>
                     <div className="flex flex-col mt-5 md:text-3xl text-lg px-8 md:p-0 text-white  font-thin ">
-                        <div>Beautiful designs. Eye-catching interactions. Memorable experiences.</div>
-                        <div>Development that delivers. Let the work do the talking.</div>
+                        <p>Beautiful designs. Eye-catching interactions. Memorable experiences.</p>
+                        <p>Development that delivers. Let the work do the talking.</p>
                     </div>
 
       </div>
-      <h1 className="text-2xl md:text-7xl font-bold text-white">
+      <h3 className="text-2xl md:text-7xl font-bold text-white">
         The Ultimate <br /> development studio
-      </h1>
+      </h3>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
