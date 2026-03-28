@@ -32,7 +32,7 @@ const testimonials = [
 
 export function TestimonialsSectionDemo() {
   return (
-   <div className="bg-gradient-to-b from-black to-[#08021E] pt-12 relative">
+   <div className="bg-gradient-to-b from-black to-[#08021E] pt-4 relative">
          <TestimonialsSection
             title="What our clients say"
             description="Some heartfelt notes from the folks who matter most — our users."

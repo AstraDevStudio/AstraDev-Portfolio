@@ -3,7 +3,7 @@ import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 
 const CTASection = () => {
   return (
-    <section className="relative w-full bg-[#08021E] py-32 overflow-hidden" aria-label="Start your project">
+    <section className="relative w-full bg-[#08021E] pt-20 pb-12 overflow-hidden" aria-label="Start your project">
       {/* Animated gradient orbs */}
       <motion.div
         animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
@@ -54,10 +54,12 @@ const CTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <InteractiveHoverButton
-            text="Start a Project"
-            className="rounded-full py-5 px-12 text-xl border-purple-500/50 text-white"
-          />
+          <a href="#contact">
+            <InteractiveHoverButton
+              text="Start a Project"
+              className="rounded-full py-5 px-12 text-xl border-purple-500/50 text-white"
+            />
+          </a>
         </motion.div>
       </div>
     </section>

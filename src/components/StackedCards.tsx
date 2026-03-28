@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 import webdesign from '../assets/images/web design.avif';
 import webapp from '../assets/images/webapp.avif';
 import automation from '../assets/images/web automation.avif';
@@ -64,32 +63,12 @@ const StackedCards = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
           
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      smooth: true,
-      duration: 1.2,
-      ease: (t:number) => 1 - Math.pow(1 - t, 3), // Custom easing
-      smoothTouch: false
-    }as any);
-
-    function raf(time:number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Sync Lenis with GSAP ScrollTrigger
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => lenis.raf(time * 1000));
-    gsap.ticker.lagSmoothing(0);
-
     // GSAP Stacked Cards Animation
     if (!containerRef.current || cardsRef.current.some(c => c === null)) return;
 
     const screenWidth = window.innerWidth;
     const startValue = screenWidth < 768 ? "top top" : "top 10%";
-    const endValue = screenWidth < 768 ? "+=2500" : "bottom bottom";
+    const endValue = screenWidth < 768 ? "+=2500" : "+=3000";
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -97,7 +76,7 @@ const StackedCards = () => {
         end: endValue,
         scrub: true,
         pin: true,
-        markers:false,
+        markers: false,
         anticipatePin: 1
       },
     });
@@ -113,19 +92,20 @@ const StackedCards = () => {
         index * 0.5
       );
     });
-    ScrollTrigger.normalizeScroll(true)
+
     ScrollTrigger.refresh();
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);
+
     return () => {
-      lenis.destroy();
+      t1.kill();
+      ScrollTrigger.getAll().forEach(st => st.kill());
     };
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full">
-        <div className="min-h-[250vh] md:min-h-[350vh] relative">
+    <div ref={containerRef} className="relative w-full h-screen">
         {cardDetails.map((card, index) => (
         <div
           key={index}
@@ -146,7 +126,6 @@ const StackedCards = () => {
           </div>
         </div>
       ))}
-        </div>
     </div>
   );
 };

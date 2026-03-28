@@ -124,15 +124,29 @@ const Astradev = () => {
         <TestimonialsSectionDemo/>
         <CTASection />
 
-        <footer className='flex flex-col items-center justify-center pb-12 pt-16 bg-black border-t border-white/5' role="contentinfo">
-          <div className='flex md:flex-row p-2 md:w-[60%] gap-1.5 md:rounded-full w-[95%] md:justify-center justify-center items-center'>
+        <footer id="contact" className='flex flex-col items-center justify-center pb-12 pt-16 bg-black border-t border-white/5' role="contentinfo">
+          <form
+            className='flex md:flex-row p-2 md:w-[60%] gap-1.5 md:rounded-full w-[95%] md:justify-center justify-center items-center'
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const emailInput = form.querySelector('input') as HTMLInputElement;
+              const email = emailInput?.value?.trim();
+              if (email) {
+                window.location.href = `mailto:astradevsstudio@gmail.com?subject=Project Inquiry&body=Hi, my email is ${encodeURIComponent(email)}. I'd like to discuss a project.`;
+              } else {
+                window.location.href = 'mailto:astradevsstudio@gmail.com?subject=Project Inquiry';
+              }
+            }}
+          >
             <input
+              type="email"
               className='bg-gradient-to-t from-[#5a4998] to-[#2a1f5e] text-white placeholder-white/60 md:rounded-4xl rounded-lg md:w-[80%] w-[80%] p-4.5 outline-none border border-purple-500/30'
               placeholder='Enter your email'
               aria-label="Email address"
             />
-            <InteractiveHoverButton text='Contact Us' className='rounded-lg md:rounded-full py-4.5 border-purple-500/50 text-white'/>
-          </div>
+            <InteractiveHoverButton type="submit" text='Contact Us' className='rounded-lg md:rounded-full py-4.5 border-purple-500/50 text-white'/>
+          </form>
           <h2 className="md:text-[10rem] text-[3rem] mt-12 font-Rammetto-One font-bold text-center text-white uppercase leading-none">
             Astradev
           </h2>

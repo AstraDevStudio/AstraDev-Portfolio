@@ -114,14 +114,7 @@ export const Header = () => {
                     </div>
 
       </div>
-      <h3 className="text-2xl md:text-7xl font-bold text-white">
-        The Ultimate <br /> development studio
-      </h3>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
-      </p>
+     
     </div>
   );
 };

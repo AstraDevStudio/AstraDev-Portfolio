@@ -18,7 +18,7 @@ const Features = () => {
                         <p>Development that delivers. Let the work do the talking.</p>
                     </div>
                 </div>
-                <div className="w-full min-h-screen">
+                <div className="w-full">
                     <StackedCards />
                 </div>
             </div>

@@ -60,9 +60,9 @@ const Navbar = () => {
 
                 <div className="flex items-center space-x-6 ">
                     {/* Fixed Let's Work Button */}
-                    <button className="px-5 py-2 text-white font-medium text-lg border border-white rounded-lg hover:bg-white hover:text-black transition">
+                    <a href="#contact" onClick={() => setIsOpen(false)} className="px-5 py-2 text-white font-medium text-lg border border-white rounded-lg hover:bg-white hover:text-black transition">
                         Let's Work
-                    </button>
+                    </a>
 
                     {/* Menu Button */}
                     <button
@@ -114,9 +114,14 @@ const Navbar = () => {
                         <div className="flex  gap-12 justify-between">
                             {/* Menu (Far Left) */}
                             <div className="flex flex-col space-y-6 text-4xl font-light text-left">
-                                {["Work", "Services", "About"].map((item) => (
-                                    <div key={item} className="group relative w-fit">
-                                        <button className="hover:text-gray-400 transition">{item}</button>
+                                {[
+                                    { label: "Work", href: "#work" },
+                                    { label: "Services", href: "#services" },
+                                    { label: "About", href: "#about" },
+                                    { label: "Contact", href: "#contact" },
+                                ].map((item) => (
+                                    <div key={item.label} className="group relative w-fit">
+                                        <a href={item.href} onClick={() => setIsOpen(false)} className="hover:text-gray-400 transition">{item.label}</a>
                                         <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
                                     </div>
                                 ))}
@@ -124,9 +129,13 @@ const Navbar = () => {
 
                             {/* Links (Left but towards the right side) */}
                             <div className="flex flex-col space-y-4 text-2xl font-normal text-left">
-                                {["Instagram", "Dribbble", "astradevsstudio@gmail.com"].map((link) => (
-                                    <div key={link} className="group relative w-fit">
-                                        <p className="hover:text-white transition">{link}</p>
+                                {[
+                                    { label: "Instagram", href: "https://instagram.com" },
+                                    { label: "Dribbble", href: "https://dribbble.com" },
+                                    { label: "astradevsstudio@gmail.com", href: "mailto:astradevsstudio@gmail.com" },
+                                ].map((link) => (
+                                    <div key={link.label} className="group relative w-fit">
+                                        <a href={link.href} target={link.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener noreferrer" className="hover:text-white transition">{link.label}</a>
                                         <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
                                     </div>
                                 ))}
